@@ -12,19 +12,19 @@
 
 #include <unistd.h>
 
-int	main(int agrc, char **agrv)
+int	main(int argc, char **argv)
 {
 	int	i;
 	int	j;
 
-	(void)agrc;
+	(void)argc;
 	j = 1;
-	while (agrv[j] != NULL)
+	while (argv[j] != NULL)
 	{
 		i = 0;
-		while (agrv[j][i] != '\0')
+		while (argv[j][i] != '\0')
 		{
-			write(1, &agrv[j][i], 1);
+			write(1, &argv[j][i], 1);
 			i++;
 		}
 		j++;
